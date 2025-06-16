@@ -1,0 +1,9 @@
+{% extends "base.html.jinja" %}
+{% block left_panel %}
+    <h2>Lista samochodów</h2>
+    <div class="list-group">
+        {% for car in cars %}
+            <a type="button" class="list-group-item list-group-item-action" href="{% url 'car' car.id %}">{{car}}</a>
+        {% endfor %}  
+    </div>  
+{% endblock left_panel %}

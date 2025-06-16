@@ -1,0 +1,9 @@
+{% extends "base.html.jinja" %}
+{% block left_panel %}
+    <h2>Lista kategorii</h2>
+    <div class="list-group">
+        {% for class, category in categories.items %}
+            <a type="button" class="list-group-item list-group-item-action" href="{% url 'category' class %}">{{class}} - {{category}}</a>
+        {% endfor %}  
+    </div>                 
+{% endblock left_panel %}
